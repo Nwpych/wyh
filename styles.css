@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+/* Geist Mono Font for decorative elements */
+.font-geist-mono {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    letter-spacing: -0.02em;
+}
+
+/* Smooth scrolling for the whole page and anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Enhance image appearance */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+/* Subtle hover effects for interactive elements */
+button, a {
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Enhance image hover effects */
+.rounded-lg {
+    transition: all 0.3s ease;
+}
+
+.rounded-lg:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
+}
+
+/* Table of contents modal animation */
+#tocModal {
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+#tocModal.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#tocModal:not(.hidden) {
+    opacity: 1;
+}
+
+#tocModal > div {
+    transition: all 0.3s ease;
+    transform: scale(1);
+}
+
+#tocModal.hidden > div {
+    transform: scale(0.95);
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 640px) {
+    h1 {
+        font-size: 1.75rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    h3 {
+        font-size: 1.25rem;
+    }
+    
+    section {
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+    }
+}
